@@ -1,0 +1,51 @@
+.sidebar {
+  width: 306px;
+  background-color: $color-default-white;
+  color: $color-default-black;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+
+
+  }
+
+  &__item {
+    // margin-bottom: 10px;
+
+  }
+
+  &__link {
+    border-radius: 10px;
+    display: block;
+    padding: 20px;
+    color: $color-font-link;
+    text-decoration: none;
+
+    position: relative;
+
+    &:hover {
+      color: $color-font-link--hover;
+      background-color: $color-background-paginaton--active;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+  }
+
+  &__manager,
+  &__rating,
+  &__experience {
+    margin: 5px 0;
+  }
+
+  @media (max-width: 680px) {
+    width: 100%;
+    height: auto;
+  }
+}

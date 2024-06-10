@@ -1,102 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <h1>Dashboard</h1>
-            <ul>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">Income</a></li>
-                <li><a href="#">Promote</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="header">
-                <h2>Hello Evano</h2>
-            </div>
-            <div class="table-container">
-                <h2>All Customers</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Customer Name</th>
-                            <th>Company</th>
-                            <th>Phone Number</th>
-                            <th>Email</th>
-                            <th>Country</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jane Cooper</td>
-                            <td>Microsoft</td>
-                            <td>(225) 555-0118</td>
-                            <td>jane@microsoft.com</td>
-                            <td>United States</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>Floyd Miles</td>
-                            <td>Yahoo</td>
-                            <td>(205) 555-0100</td>
-                            <td>floyd@yahoo.com</td>
-                            <td>Kiribati</td>
-                            <td>Inactive</td>
-                        </tr>
-                        <tr>
-                            <td>Ronald Richards</td>
-                            <td>Adobe</td>
-                            <td>(302) 555-0107</td>
-                            <td>ronald@adobe.com</td>
-                            <td>Israel</td>
-                            <td>Inactive</td>
-                        </tr>
-                        <tr>
-                            <td>Marvin McKinney</td>
-                            <td>Tesla</td>
-                            <td>(252) 555-0128</td>
-                            <td>marvingtesia.com</td>
-                            <td>Iran</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>Jerome Bell</td>
-                            <td>Google</td>
-                            <td>(529) 555-0129</td>
-                            <td>jerome@google.com</td>
-                            <td>Réunion</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>Kathryn Murphy</td>
-                            <td>Microsoft</td>
-                            <td>(406) 555-0120</td>
-                            <td>kathryn@microsoft.com</td>
-                            <td>Curaçao</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob Jones</td>
-                            <td>Yahoo</td>
-                            <td>(208) 555-0112</td>
-                            <td>jacob@yahoo.com</td>
-                            <td>Brazil</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>Kristin Watson</td>
-                            <td>Facebook</td>
-                            <td>(704) 555-0127</td>
-                            <td>kristin@facebook.com</td>
-                            <td>Åland Islands</td>
-                            <td>Inactive</td>
-                        </tr>
+
+<body class="page__body">
+  <div class="container">
+    <div class="sidebar container__block">
+      <h1 class="sidebar__title">Dashboard</h1>
+      <ul class="sidebar__menu">
+        <li class="sidebar__item"><a href="#" class="sidebar__link">Dashboard
+            <svg class="sidebar__logo" viewBox="0 0 24 24" width="24" height="24">
+              <use href="img/sprite_auto.svg#dashboard"></use>
+            </svg>
+          </a></li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">Product <svg class="sidebar__logo"
+              viewBox="0 0 24 24" width="24" height="24">
+              <use href="img/sprite_auto.svg#product"></use>
+            </svg></a></li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">Customers <svg class="sidebar__logo"
+              viewBox="0 0 24 24" width="24" height="24">
+              <use href="img/sprite_auto.svg#customer"></use>
+            </svg></a></li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">Income <svg class="sidebar__logo"
+              viewBox="0 0 24 24" width="24" height="24">
+              <use href="img/sprite_auto.svg#income"></use>
+            </svg></a></li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">Promote <svg class="sidebar__logo"
+              viewBox="0 0 24 24" width="24" height="24">
+              <use href="img/sprite_auto.svg#promote"></use>
+            </svg></a></li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">Help <svg class="sidebar__logo" viewBox="0 0 24 24"
+              width="24" height="24">
+              <use href="img/sprite_auto.svg#help"></use>
+            </svg></a></li>
+      </ul>
+      <div>
+        <p class="sidebar__manager">Project Manager: Evano</p>
+        <p class="sidebar__rating">Rating: 3.4</p>
+        <p class="sidebar__experience">Years of Experience: 40</p>
+      </div>
+    </div>
+    <div class="content container__block">
+      <div class="content__header">
+        <h2 class="content__title">Hello Evano</h2>
+      </div>
+      <div class="table-container">
+        <h2 class="table-container__title">All Customers</h2>
+        <table class="table">
+          <thead class="table__header">
+            <tr class="table__header-row">
+              <th class="table__header-cell">Customer Name</th>
+              <th class="table__header-cell">Company</th>
+              <th class="table__header-cell">Phone Number</th>
+              <th class="table__header-cell">Email</th>
+              <th class="table__header-cell">Country</th>
+              <th class="table__header-cell">Status</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__cell">Jane Cooper</td>
+              <td class="table__cell">Microsoft</td>
+              <td class="table__cell">(225) 555-0118</td>
+              <td class="table__cell">jane@microsoft.com</td>
+              <td class="table__cell">United States</td>
+              <td class="table__cell table__cell--active">Active</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">Floyd Miles</td>
+              <td class="table__cell">Yahoo</td>
+              <td class="table__cell">(205) 555-0100</td>
+              <td class="table__cell">floyd@yahoo.com</td>
+              <td class="table__cell">Kiribati</td>
+              <td class="table__cell table__cell--inactive">Inactive</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">Ronald Richards</td>
+              <td class="table__cell">Adobe</td>
+              <td class="table__cell">(302) 555-0107</td>
+              <td class="table__cell">ronald@adobe.com</td>
+              <td class="table__cell">Israel</td>
+              <td class="table__cell table__cell--inactive">Inactive</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">Marvin McKinney</td>
+              <td class="table__cell">Tesla</td>
+              <td class="table__cell">(252) 555-0128</td>
+              <td class="table__cell">marvin@tesla.com</td>
+              <td class="table__cell">Iran</td>
+              <td class="table__cell table__cell--active">Active</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">Jerome Bell</td>
+              <td class="table__cell">Google</td>
+              <td class="table__cell">(529) 555-0129</td>
+              <td class="table__cell">jerome@google.com</td>
+              <td class="table__cell">Réunion</td>
+              <td class="table__cell table__cell--active">Active</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">Kathryn Murphy</td>
+              <td class="table__cell">Microsoft</td>
+              <td class="table__cell">(406) 555-0120</td>
+              <td class="table__cell">kathryn@microsoft.com</td>
+              <td class="table__cell">Curaçao</td>
+              <td class="table__cell table__cell--active">Active</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">Jacob Jones</td>
+              <td class="table__cell">Yahoo</td>
+              <td class="table__cell">(208) 555-0112</td>
+              <td class="table__cell">jacob@yahoo.com</td>
+              <td class="table__cell">Brazil</td>
+              <td class="table__cell table__cell--active">Active</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">Kristin Watson</td>
+              <td class="table__cell">Facebook</td>
+              <td class="table__cell">(704) 555-0127</td>
+              <td class="table__cell">kristin@facebook.com</td>
+              <td class="table__cell">Åland Islands</td>
+              <td class="table__cell table__cell--inactive">Inactive</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
