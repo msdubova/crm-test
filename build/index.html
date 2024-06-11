@@ -5,39 +5,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
+
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Poppins-SemiBold.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
   <div class="container">
     <div class="sidebar container__block">
-      <h1 class="sidebar__title">Dashboard</h1>
+      <h1 class="sidebar__title">
+        <svg class="sidebar__logo" viewBox="0 0 37 37" width="37" height="37">
+          <use href="img/sprite_auto.svg#logo"></use>
+        </svg>Dashboard
+      </h1>
       <ul class="sidebar__menu">
-        <li class="sidebar__item"><a href="#" class="sidebar__link">Dashboard
-            <svg class="sidebar__logo" viewBox="0 0 24 24" width="24" height="24">
+        <li class="sidebar__item"><a href="#" class="sidebar__link">
+            <svg class="sidebar__icon" viewBox="0 0 24 24" width="24" height="24">
               <use href="img/sprite_auto.svg#dashboard"></use>
             </svg>
-          </a></li>
-        <li class="sidebar__item"><a href="#" class="sidebar__link">Product <svg class="sidebar__logo"
-              viewBox="0 0 24 24" width="24" height="24">
+            Dashboard
+          </a>
+        </li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">
+            <svg class="sidebar__icon" viewBox="0 0 24 24" width="24" height="24">
               <use href="img/sprite_auto.svg#product"></use>
-            </svg></a></li>
-        <li class="sidebar__item"><a href="#" class="sidebar__link">Customers <svg class="sidebar__logo"
-              viewBox="0 0 24 24" width="24" height="24">
+            </svg>
+            Product
+          </a>
+        </li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">
+            <svg class="sidebar__icon" viewBox="0 0 24 24" width="24" height="24">
               <use href="img/sprite_auto.svg#customer"></use>
-            </svg></a></li>
-        <li class="sidebar__item"><a href="#" class="sidebar__link">Income <svg class="sidebar__logo"
-              viewBox="0 0 24 24" width="24" height="24">
+            </svg>
+            Customers
+          </a>
+        </li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">
+            <svg class="sidebar__icon" viewBox="0 0 24 24" width="24" height="24">
               <use href="img/sprite_auto.svg#income"></use>
-            </svg></a></li>
-        <li class="sidebar__item"><a href="#" class="sidebar__link">Promote <svg class="sidebar__logo"
-              viewBox="0 0 24 24" width="24" height="24">
+            </svg>
+            Income
+          </a>
+        </li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">
+            <svg class="sidebar__icon" viewBox="0 0 24 24" width="24" height="24">
               <use href="img/sprite_auto.svg#promote"></use>
-            </svg></a></li>
-        <li class="sidebar__item"><a href="#" class="sidebar__link">Help <svg class="sidebar__logo" viewBox="0 0 24 24"
-              width="24" height="24">
+            </svg>
+            Promote
+          </a>
+        </li>
+        <li class="sidebar__item"><a href="#" class="sidebar__link">
+            <svg class="sidebar__icon" viewBox="0 0 24 24" width="24" height="24">
               <use href="img/sprite_auto.svg#help"></use>
-            </svg></a></li>
+            </svg>
+            Help
+          </a>
+        </li>
       </ul>
       <div>
         <p class="sidebar__manager">Project Manager: Evano</p>

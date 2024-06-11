@@ -5,47 +5,62 @@
 
   &__title {
     margin-bottom: 20px;
+    display: flex;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-right: 14px;
   }
 
   &__menu {
     list-style: none;
     padding: 0;
-
-
-  }
-
-  &__item {
-    // margin-bottom: 10px;
-
   }
 
   &__link {
     border-radius: 10px;
-    display: block;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
     color: $color-font-link;
     text-decoration: none;
-
     position: relative;
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/svg/arrow.svg");
+      right: 10px;
+    }
+
     &:hover {
-      color: $color-font-link--hover;
+      color: $color-default-white;
       background-color: $color-background-paginaton--active;
+
+      &::after {
+        background-image: url("../img/svg/arrow-white.svg");
+      }
+
+
+    }
+  }
+    &__icon {
+      display: inline-block;
+      margin-right: 14px;
+    }
+
+    &__manager,
+    &__rating,
+    &__experience {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 680px) {
+      width: 100%;
+      height: auto;
     }
   }
 
-  &__logo {
-    display: inline-block;
-  }
-
-  &__manager,
-  &__rating,
-  &__experience {
-    margin: 5px 0;
-  }
-
-  @media (max-width: 680px) {
-    width: 100%;
-    height: auto;
-  }
-}
