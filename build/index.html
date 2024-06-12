@@ -18,11 +18,12 @@
 <body class="page__body">
   <div class="container">
     <div class="sidebar container__block">
-      <h1 class="sidebar__title">
+      <h2 class="sidebar__title">
         <svg class="sidebar__logo" viewBox="0 0 37 37" width="37" height="37">
           <use href="img/sprite_auto.svg#logo"></use>
         </svg>Dashboard
-      </h1>
+        <span class="sidebar__title-v">v.01</span>
+      </h2>
       <ul class="sidebar__menu">
         <li class="sidebar__item"><a href="#" class="sidebar__link">
             <svg class="sidebar__icon" viewBox="0 0 24 24" width="24" height="24">
@@ -67,27 +68,38 @@
           </a>
         </li>
       </ul>
-      <div>
+      <div class="sidebar__user">
         <p class="sidebar__manager">Project Manager: Evano</p>
         <p class="sidebar__rating">Rating: 3.4</p>
         <p class="sidebar__experience">Years of Experience: 40</p>
       </div>
     </div>
-    <div class="content container__block">
+    <div class="content container__block container__block--content">
       <div class="content__header">
-        <h2 class="content__title">Hello Evano</h2>
+        <h2 class="content__title">Hello Evano 👋🏼, </h2>
       </div>
-      <div class="table-container">
-        <h2 class="table-container__title">All Customers</h2>
-        <table class="table">
-          <thead class="table__header">
-            <tr class="table__header-row">
-              <th class="table__header-cell">Customer Name</th>
-              <th class="table__header-cell">Company</th>
-              <th class="table__header-cell">Phone Number</th>
-              <th class="table__header-cell">Email</th>
-              <th class="table__header-cell">Country</th>
-              <th class="table__header-cell">Status</th>
+      <div class="content__table table">
+
+        <div class="table__header">
+          <div class="table__block">
+            <h2 class="table__title">All Customers</h2>
+            <h3 class="table__note">Active Members</h3>
+          </div>
+          <div class="table__block">
+            <input type="text" id="search" placeholder="search">
+            <label for="search"></label>
+          </div>
+        </div>
+
+        <table class="table__container">
+          <thead class="table__top">
+            <tr class="table__top-row">
+              <th class="table__top-cell">Customer Name</th>
+              <th class="table__top-cell">Company</th>
+              <th class="table__top-cell">Phone Number</th>
+              <th class="table__top-cell">Email</th>
+              <th class="table__top-cell">Country</th>
+              <th class="table__top-cell">Status</th>
             </tr>
           </thead>
           <tbody class="table__body">
@@ -97,7 +109,7 @@
               <td class="table__cell">(225) 555-0118</td>
               <td class="table__cell">jane@microsoft.com</td>
               <td class="table__cell">United States</td>
-              <td class="table__cell table__cell--active">Active</td>
+              <td class="table__cell "><span class="table__status table__status--active">Active</span></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell">Floyd Miles</td>
@@ -105,7 +117,7 @@
               <td class="table__cell">(205) 555-0100</td>
               <td class="table__cell">floyd@yahoo.com</td>
               <td class="table__cell">Kiribati</td>
-              <td class="table__cell table__cell--inactive">Inactive</td>
+              <td class="table__cell "><span class="table__status table__status--inactive">Inactive</span></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell">Ronald Richards</td>
@@ -113,7 +125,7 @@
               <td class="table__cell">(302) 555-0107</td>
               <td class="table__cell">ronald@adobe.com</td>
               <td class="table__cell">Israel</td>
-              <td class="table__cell table__cell--inactive">Inactive</td>
+              <td class="table__cell "><span class="table__status table__status--inactive">Inactive</span></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell">Marvin McKinney</td>
@@ -121,7 +133,7 @@
               <td class="table__cell">(252) 555-0128</td>
               <td class="table__cell">marvin@tesla.com</td>
               <td class="table__cell">Iran</td>
-              <td class="table__cell table__cell--active">Active</td>
+              <td class="table__cell "><span class="table__status table__status--active">Active</span></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell">Jerome Bell</td>
@@ -129,7 +141,7 @@
               <td class="table__cell">(529) 555-0129</td>
               <td class="table__cell">jerome@google.com</td>
               <td class="table__cell">Réunion</td>
-              <td class="table__cell table__cell--active">Active</td>
+              <td class="table__cell "><span class="table__status table__status--active">Active</span></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell">Kathryn Murphy</td>
@@ -137,7 +149,7 @@
               <td class="table__cell">(406) 555-0120</td>
               <td class="table__cell">kathryn@microsoft.com</td>
               <td class="table__cell">Curaçao</td>
-              <td class="table__cell table__cell--active">Active</td>
+              <td class="table__cell "><span class="table__status table__status--active">Active</span></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell">Jacob Jones</td>
@@ -145,7 +157,7 @@
               <td class="table__cell">(208) 555-0112</td>
               <td class="table__cell">jacob@yahoo.com</td>
               <td class="table__cell">Brazil</td>
-              <td class="table__cell table__cell--active">Active</td>
+              <td class="table__cell "><span class="table__status table__status--active">Active</span></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell">Kristin Watson</td>
@@ -153,7 +165,7 @@
               <td class="table__cell">(704) 555-0127</td>
               <td class="table__cell">kristin@facebook.com</td>
               <td class="table__cell">Åland Islands</td>
-              <td class="table__cell table__cell--inactive">Inactive</td>
+              <td class="table__cell "><span class="table__status table__status--inactive">Inactive</span></td>
             </tr>
           </tbody>
         </table>

@@ -1,0 +1,175 @@
+.table {
+
+  background-color: #fff;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+
+  margin-bottom: 20px;
+
+  &__title {
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__note {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-background-status--active;
+  }
+
+  &__container {
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  &__header {
+    padding: 32px 38px 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  &__top {
+    position: relative;
+
+
+
+    &-cell {
+      padding: 15px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 500;
+      color: $color-text-inactive;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 200%;
+      height: 1px;
+      background-color: $color-background;
+      left: -30%;
+    }
+  }
+
+
+  &__row {
+    padding-left: 50px;
+  }
+
+  &__cell {
+text-wrap: nowrap;
+    padding: 18px 15px 15px 0 ;
+    text-align: left;
+
+border-bottom: 1px solid $color-background;
+    font-size: 14px;
+    font-weight: 500;
+
+
+
+  }
+
+  &__status {
+    display: block;
+    text-align: center;
+    border: 1px solid $color-background;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80px;
+    max-width: 80px;
+    box-sizing: border-box;
+    margin-right: 6px;
+
+    &--active {
+      background-color: $color-background-status--active;
+      color: $color-font-status--active;
+      border-color: $color-font-status--active;
+    }
+
+    &--inactive {
+      background-color: $color-background-status--inactive;
+      color: $color-font-status--inactive;
+      border-color: $color-font-status--inactive;
+    }
+  }
+
+}
+
+.table__top-cell:nth-child(1),
+.table__cell:nth-child(1) {
+  width: 18%;
+  margin-left: 20px;
+
+}
+.table__top-cell:nth-child(2),
+.table__cell:nth-child(2) {
+  width: 15%
+
+}
+
+.table__top-cell:nth-child(3),
+.table__cell:nth-child(3) {
+  width: 15%
+
+}
+
+.table__top-cell:nth-child(4),
+.table__cell:nth-child(4) {
+  width: 15%
+
+}
+
+.table__top-cell:nth-child(5),
+.table__cell:nth-child(5) {
+  width: 16%
+
+}
+
+.table__top-cell:nth-child(6),
+.table__cell:nth-child(6) {
+  width: 8%;
+
+
+
+}
+
+@include tablet {
+  .table {
+    padding: 10px;
+
+    &__cell {
+      padding: 10px;
+    }
+  }
+}
+
+@include mobile {
+  .table {
+    padding: 5px;
+
+    &__title {
+      font-size: 1.2em;
+    }
+
+    &__header {
+      &__cell {
+        padding: 8px;
+        font-size: 0.8em;
+      }
+    }
+
+    &__row {
+      &__cell {
+        padding: 8px;
+        font-size: 0.8em;
+      }
+    }
+
+  }
+}
