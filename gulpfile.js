@@ -14,8 +14,18 @@ const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const gcmq = require('gulp-group-css-media-queries');
+const pug = require('gulp-pug');
+
 
 const ghPages = require('gulp-gh-pages');
+
+const compilePug = () => {
+  return gulp.src('source/*.pug')
+    .pipe(plumber())
+    .pipe(pug())
+    .pipe(gulp.dest('build'));
+};
+
 
 gulp.task('deploy', function() {
   return gulp.src('./build/**/*')
@@ -78,7 +88,7 @@ const copyImages = () => {
 
 const copy = () => {
   return gulp.src([
-    'source/**.html',
+    'source/**.pug',
     'source/fonts/**',
     'source/img/**',
     'source/favicon/**',
@@ -95,7 +105,6 @@ const clean = () => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    // index: 'sitemap.html',
     index: 'index.html',
     notify: false,
     open: true,
@@ -103,7 +112,7 @@ const syncServer = () => {
     ui: false,
   });
 
-  gulp.watch('source/**.html', gulp.series(copy, refresh));
+  gulp.watch('source/**.pug', gulp.series(copy, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series(css));
   gulp.watch('source/js/**/*.{js,json}', gulp.series(js, refresh));
   gulp.watch('source/data/**/*.{js,json}', gulp.series(copy, refresh));
@@ -121,7 +130,7 @@ const refresh = (done) => {
   done();
 };
 
-const build = gulp.series(clean, svgo, copy, css, sprite, js);
+const build = gulp.series( clean, svgo, copy,compilePug, css, sprite, js);
 
 const start = gulp.series(build, syncServer);
 

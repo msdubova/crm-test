@@ -44,15 +44,15 @@
     "gulp-imagemin": "7.1.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
+    "gulp-pug": "^5.0.0",
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.2",
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "7.0.1",
     "gulp-webp": "4.0.1",
+    "pug": "^3.0.2",
     "stylelint": "13.13.1",
     "webpack": "4.42.0",
-    "webpack-stream": "5.2.1",
-    "gulp-pug": "^5.0.0",
-    "pug": "^3.0.2"
+    "webpack-stream": "5.2.1"
   }
 }

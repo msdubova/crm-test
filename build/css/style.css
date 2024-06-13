@@ -524,7 +524,7 @@ template {
 }
 
 .pagination__item {
-  margin: 0 5px;
+  margin: 0 6px;
 }
 
 .pagination__item--bunch {
@@ -532,7 +532,7 @@ template {
 }
 
 .pagination__link {
-  width: 25px;
+  width: 24px;
   height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -782,7 +782,7 @@ template {
 
 .table__pagination {
   margin-bottom: 40px;
-  margin-right: 33px;
+  margin-right: 34px;
 }
 
 .table__top-cell:nth-child(1),
