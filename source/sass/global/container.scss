@@ -1,23 +1,17 @@
 .container {
   display: flex;
-  // max-width: $max-desktop;
+
+  height: 100vh;
 
   &__block {
-    padding:38px 30px 77px;
+
     box-sizing: border-box;
-    height: 100vh;
 
-    &--content {
-      padding: 46px 78px 46px 71px;
-
-    }
 
 
   }
 
-  @include max-desktop {
-    margin: auto;
-  }
+
 
   @include mobile {
     flex-direction: column;

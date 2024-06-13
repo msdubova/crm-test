@@ -1,11 +1,13 @@
 .sidebar {
   width: 306px;
-  height: 100vh;
+  height: 100%;
   max-width: 306px;
   background-color: $color-default-white;
   color: $color-default-black;
+  padding: 38px 30px 77px;
   display: flex;
   flex-direction: column;
+
 
   &__title {
     margin-bottom: 38px;
@@ -34,9 +36,12 @@
     list-style: none;
     padding: 0;
   }
-&__item {
-  margin-bottom: 20px;
-}
+
+  &__item {
+    margin-bottom: 20px;
+    width: 250px;
+  }
+
   &__link {
     border-radius: 5px;
     display: flex;
@@ -45,19 +50,20 @@
     color: $color-font-link;
     text-decoration: none;
     position: relative;
-font-size: 14px;
+    font-size: 14px;
+
     &::after {
       content: "";
       position: absolute;
       width: 16px;
       height: 16px;
       background-image: url("../img/svg/arrow.svg");
-      right: 6px;
+      right: 10px;
     }
 
     &:hover {
       color: $color-default-white;
-      background-color: $color-background-paginaton--active;
+      background-color: $color-paginaton-background-active;
 
       &::after {
         background-image: url("../img/svg/arrow-white.svg");

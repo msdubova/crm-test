@@ -1,15 +1,17 @@
 .content {
-  flex: 1;
+  padding: 46px 78px 46px 20px;
+  margin-left: 50px;
+  width: 100%;
 
   &__header {
 
 
     margin-bottom: 55px;
 
+  }
 
-    &__title {
-      margin: 0;
-    }
+  &__table {
+    border: 0.1px solid $color-default-white;
   }
 
 
