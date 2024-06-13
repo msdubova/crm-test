@@ -1,0 +1,43 @@
+.input {
+  position: relative;
+
+  input {
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-text-inactive;
+    box-sizing: border-box;
+    width: 216px;
+    border: none;
+    background-color: $color-background-light;
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-top: 10px;
+
+    &::placeholder {
+      color: $color-text-inactive;
+    }
+    &:hover {
+      background-color: darken($color-background-light, 5%);
+    }
+
+    &:focus {
+      outline: 2px solid $color-text-focus;
+      color: $color-text-default;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: " ";
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/svg/search.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-70%);
+  }
+}

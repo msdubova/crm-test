@@ -1,6 +1,6 @@
 .table {
   background-color: $color-default-white;
-  box-shadow: 0 0 10px $color-default-black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   margin-bottom: 20px;
 
@@ -40,14 +40,14 @@
       color: $color-text-inactive;
     }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 200%;
-      height: 1px;
-      background-color: $color-background;
-      left: -30%;
-    }
+    // &::after {
+    //   position: absolute;
+    //   content: "";
+    //   width: 200%;
+    //   height: 1px;
+    //   background-color: $color-background;
+    //   left: -30%;
+    // }
   }
 
   &__row {
