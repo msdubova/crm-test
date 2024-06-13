@@ -426,7 +426,7 @@ template {
 }
 
 .container__block {
-  padding: 38px 30px;
+  padding: 38px 30px 77px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100vh;
@@ -510,6 +510,7 @@ template {
 
 .sidebar {
   width: 306px;
+  height: 100vh;
   max-width: 306px;
   background-color: #FFFFFF;
   color: #000000;
@@ -740,6 +741,46 @@ template {
 .table__top-cell:nth-child(6),
 .table__cell:nth-child(6) {
   width: 12%;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.user__image {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.user__name {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.user__job {
+  font-size: 12px;
+  font-weight: 400;
+  color: #757575;
+  margin: 0;
 }
 
 @media (min-width: 1440px) {
