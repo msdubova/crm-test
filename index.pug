@@ -1,0 +1,174 @@
+doctype html
+html(lang="en", class="page")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Dashboard
+
+    link(rel="preload", href="fonts/Poppins-Medium.woff2", as="font", type="font/woff2", crossorigin)
+    link(rel="preload", href="fonts/Poppins-Regular.woff2", as="font", type="font/woff2", crossorigin)
+    link(rel="preload", href="fonts/Poppins-SemiBold.woff2", as="font", type="font/woff2", crossorigin)
+    link(rel="preload", href="fonts/Poppins-Medium.woff", as="font", type="font/woff", crossorigin)
+    link(rel="preload", href="fonts/Poppins-Regular.woff", as="font", type="font/woff", crossorigin)
+    link(rel="preload", href="fonts/Poppins-SemiBold.woff", as="font", type="font/woff", crossorigin)
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body(class="page__body")
+    .container
+      .sidebar.container__block
+        h2.sidebar__title
+          svg.sidebar__logo(viewBox="0 0 37 37", width="37", height="37")
+            use(href="img/sprite_auto.svg#logo")
+          | Dashboard
+          span.sidebar__title-v v.01
+
+        ul.sidebar__menu
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              svg.sidebar__icon(viewBox="0 0 24 24", width="24", height="24")
+                use(href="img/sprite_auto.svg#dashboard")
+              | Dashboard
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              svg.sidebar__icon(viewBox="0 0 24 24", width="24", height="24")
+                use(href="img/sprite_auto.svg#product")
+              | Product
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              svg.sidebar__icon(viewBox="0 0 24 24", width="24", height="24")
+                use(href="img/sprite_auto.svg#customer")
+              | Customers
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              svg.sidebar__icon(viewBox="0 0 24 24", width="24", height="24")
+                use(href="img/sprite_auto.svg#income")
+              | Income
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              svg.sidebar__icon(viewBox="0 0 24 24", width="24", height="24")
+                use(href="img/sprite_auto.svg#promote")
+              | Promote
+          li.sidebar__item
+            a.sidebar__link(href="#")
+              svg.sidebar__icon(viewBox="0 0 24 24", width="24", height="24")
+                use(href="img/sprite_auto.svg#help")
+              | Help
+
+        .sidebar__user.user
+          .user__image
+            picture
+              source(srcset="img/evano_1x.webp 1x, img/evano_2x.webp 2x", type="image/webp")
+              source(srcset="img/evano_1x.png 1x, img/evano_2x.png 2x", type="image/png")
+              img.user__image(src="img/evano_1x.png", alt="User Image")
+          .user__text
+            p.user__name Evano
+            p.user__job Project Manager
+
+      .content.container__block
+        .content__header
+          h2.content__title Hello Evano 👋🏼,
+
+        .content__table.table
+          .table__header
+            .table__block
+              h2.table__title All Customers
+              h3.table__note Active Members
+            .table__block.input
+              input(type="text", id="search", placeholder="search")
+              label(for="search")
+
+          table.table__container
+            thead.table__top
+              tr.table__top-row
+                th.table__top-cell Customer Name
+                th.table__top-cell Company
+                th.table__top-cell Phone Number
+                th.table__top-cell Email
+                th.table__top-cell Country
+                th.table__top-cell Status
+
+            tbody.table__body
+              tr.table__row
+                td.table__cell Jane Cooper
+                td.table__cell Microsoft
+                td.table__cell (225) 555-0118
+                td.table__cell jane@microsoft.com
+                td.table__cell United States
+                td.table__cell
+                  span.table__status.table__status--active Active
+              tr.table__row
+                td.table__cell Floyd Miles
+                td.table__cell Yahoo
+                td.table__cell (205) 555-0100
+                td.table__cell floyd@yahoo.com
+                td.table__cell Kiribati
+                td.table__cell
+                  span.table__status.table__status--inactive Inactive
+              tr.table__row
+                td.table__cell Ronald Richards
+                td.table__cell Adobe
+                td.table__cell (302) 555-0107
+                td.table__cell ronald@adobe.com
+                td.table__cell Israel
+                td.table__cell
+                  span.table__status.table__status--inactive Inactive
+              tr.table__row
+                td.table__cell Marvin McKinney
+                td.table__cell Tesla
+                td.table__cell (252) 555-0128
+                td.table__cell marvin@tesla.com
+                td.table__cell Iran
+                td.table__cell
+                  span.table__status.table__status--active Active
+              tr.table__row
+                td.table__cell Jerome Bell
+                td.table__cell Google
+                td.table__cell (529) 555-0129
+                td.table__cell jerome@google.com
+                td.table__cell Réunion
+                td.table__cell
+                  span.table__status.table__status--active Active
+              tr.table__row
+                td.table__cell Kathryn Murphy
+                td.table__cell Microsoft
+                td.table__cell (406) 555-0120
+                td.table__cell kathryn@microsoft.com
+                td.table__cell Curaçao
+                td.table__cell
+                  span.table__status.table__status--active Active
+              tr.table__row
+                td.table__cell Jacob Jones
+                td.table__cell Yahoo
+                td.table__cell (208) 555-0112
+                td.table__cell jacob@yahoo.com
+                td.table__cell Brazil
+                td.table__cell
+                  span.table__status.table__status--active Active
+              tr.table__row
+                td.table__cell Kristin Watson
+                td.table__cell Facebook
+                td.table__cell (704) 555-0127
+                td.table__cell kristin@facebook.com
+                td.table__cell Åland Islands
+                td.table__cell
+                  span.table__status.table__status--inactive Inactive
+
+          .table__pagination.pagination
+            ul.pagination__list
+              li.pagination__item
+                a.pagination__link.pagination__link--prev &lt;
+              li.pagination__item
+                a.pagination__link.pagination__link--active 1
+              li.pagination__item
+                a.pagination__link 2
+              li.pagination__item
+                a.pagination__link 3
+              li.pagination__item
+                a.pagination__link 4
+              li.pagination__item.pagination__item--bunch
+                a.pagination__link.pagination__link--bunch ...
+              li.pagination__item
+                a.pagination__link 40
+              li.pagination__item
+                a.pagination__link.pagination__link--next &gt;
+script(src="js/main.min.js")
