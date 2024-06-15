@@ -929,6 +929,10 @@ template {
 }
 
 @media (max-width: 768px) {
+  .input input {
+    width: 140px;
+  }
+
   .sidebar {
     position: relative;
   }
@@ -986,5 +990,36 @@ template {
   .table__row__cell {
     padding: 8px;
     font-size: 0.8em;
+  }
+
+  .table__top-cell:nth-child(1),
+  .table__cell:nth-child(1) {
+    width: 33%;
+    margin-left: 0;
+  }
+
+  .table__top-cell:nth-child(2),
+  .table__cell:nth-child(2) {
+    display: 33%;
+  }
+
+  .table__top-cell:nth-child(3),
+  .table__cell:nth-child(3) {
+    display: none;
+  }
+
+  .table__top-cell:nth-child(4),
+  .table__cell:nth-child(4) {
+    display: none;
+  }
+
+  .table__top-cell:nth-child(5),
+  .table__cell:nth-child(5) {
+    display: none;
+  }
+
+  .table__top-cell:nth-child(6),
+  .table__cell:nth-child(6) {
+    width: 33%;
   }
 }
