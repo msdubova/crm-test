@@ -1,19 +1,15 @@
 .container {
   display: flex;
-
-  height: 100vh;
+  flex: 1;
 
   &__block {
-
     box-sizing: border-box;
-
-
-
   }
+}
 
-
-
-  @include mobile {
+@include tablet {
+  .container{
     flex-direction: column;
   }
+
 }

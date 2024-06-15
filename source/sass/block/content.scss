@@ -1,34 +1,30 @@
 .content {
-  padding: 46px 78px 46px 20px;
-  margin-left: 50px;
+  padding: 46px 5.4% 46px 1.2%;
+  margin-left: 3.5%;
   width: 100%;
 
   &__header {
-
-
     margin-bottom: 55px;
-
   }
 
   &__table {
     border: 0.1px solid $color-default-white;
   }
 
-
-
   @include tablet {
-    padding: 10px;
-
-
+    .content {
+      margin: 0;
+      padding: 10px;
+    }
   }
 
   @include mobile {
-    padding: 5px;
+    .content {
+      padding: 5px;
 
-    &__header {
-      padding: 10px;
+      &__header {
+        padding: 10px;
+      }
     }
-
-
   }
 }
