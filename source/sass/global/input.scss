@@ -41,3 +41,13 @@
     transform: translateY(-70%);
   }
 }
+
+
+@include mobile
+{
+  .input {
+    input {
+      width: 140px;
+    }
+  }
+}
